@@ -48,6 +48,10 @@ pro._DataApi__http_url = url
 | 日线行情 (OHLCV) | `daily` | `pro.daily(ts_code='000001.SZ', start_date='20240101', end_date='20240115')` |
 | 周线/月线行情 | `weekly` / `monthly` | 参数同 daily |
 | 每日估值指标 (PE/PB) | `daily_basic` | `pro.daily_basic(ts_code='000001.SZ', start_date='20240101', end_date='20240115')` |
+| 资金流向 | `moneyflow` | `pro.moneyflow(ts_code='000001.SZ', start_date='20240101', end_date='20240115')` |
+
+> ⚠️ **moneyflow 单位**：`*_amount` 金额字段单位为 **万元**（/1e4=亿元），`*_vol` 成交量单位为 **手**（/1e4=万手）。
+> 主力 = `lg`（大单）+ `elg`（超大单）。
 | 指数日线 | `index_daily` | `pro.index_daily(ts_code='000001.SH', start_date='20240101', end_date='20240115')` |
 | 利润表 | `income` | `pro.income(ts_code='000001.SZ', start_date='20230101', end_date='20231231')` |
 | 资产负债表 | `balancesheet` | 参数同 income |
